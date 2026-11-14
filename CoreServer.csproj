@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>CoreServer</RootNamespace>
+
+    <!-- === tuned for a small VPS (1 core / 1 GB) === -->
+    <!-- one non-concurrent workstation GC: no per-core heaps, no background GC thread -->
+    <ServerGarbageCollector>false</ServerGarbageCollector>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UseSystemResourceKeys>true</UseSystemResourceKeys>
+    <TieredPGO>true</TieredPGO>
+    <!-- the code uses no reflection, so it can be published with Native AOT (see README) -->
+    <IsAotCompatible>true</IsAotCompatible>
+
+    <!-- === DEBUGGING MODE IF SOMETHING FRICKS UP AND YOU NEED TO SEE WHAT'S GOING ON === -->
+    <!-- uncomment the line below; when it is commented out, debug logging is compiled away entirely -->
+    <!-- <DefineConstants>$(DefineConstants);DEBUG_LOG</DefineConstants> -->
+  </PropertyGroup>
+
+  <!-- config.json goes next to the exe for local runs, but NOT into publish output:
+       a deploy must never overwrite the settings on the server (a missing file is created with defaults) -->
+  <ItemGroup>
+    <Content Update="config.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="Never" />
+  </ItemGroup>
+
+</Project>
