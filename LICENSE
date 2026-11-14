@@ -1,3 +1,36 @@
+"Commons Clause" License Condition v1.0
+
+The Software is provided to you by the Licensor under the License, as defined
+below, subject to the following condition.
+
+Without any other limitation, the License does not grant you the right to Sell
+the Software.
+
+For purposes of the foregoing, "Sell" means practicing any or all of the rights
+granted to you under the License to provide to third parties, for a fee or other
+consideration (including without limitation fees for hosting or consulting/
+support services related to the Software), a product or service whose value
+derives, entirely or substantially, from the functionality of the Software. Any
+license notice or attribution required by the License must also include this
+Commons Clause License Condition notice.
+
+Software: CoreServer
+License: BSD 3-Clause License
+Licensor: tetronet
+
+Additional conditions:
+
+1. "A fee or other consideration" includes any direct or indirect
+   compensation, including advertising revenue and the sale or sharing of
+   user data.
+
+2. Relayed data. Running the Software grants you no rights to the data relayed
+   through it. That data belongs to the people who send it. You may not
+   inspect, store, analyze, sell, or share relayed data, except as strictly
+   necessary to relay it or as required by law.
+
+-------------------------------------------------------------------------------
+
 BSD 3-Clause License
 
 Copyright (c) 2026, tetronet
